@@ -1,0 +1,31 @@
+@use "./../abstracts/functions" as f;
+@use "./../abstracts/mixins" as m;
+
+.logo {
+  @include m.common-flex;
+  padding-block: f.rem(32);
+
+  @media (width >= 48em) {
+    padding-block: f.rem(50);
+  }
+
+  div {
+    &:nth-child(n + 4) {
+      display: none;
+
+      @media (width >= 48em) {
+        display: initial;
+      }
+    }
+
+    @media (width >= 48em) {
+      &:nth-child(n + 6) {
+        display: none;
+
+        @media (width >=75em) {
+          display: initial;
+        }
+      }
+    }
+  }
+}

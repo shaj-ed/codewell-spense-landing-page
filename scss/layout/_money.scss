@@ -1,0 +1,65 @@
+@use "./../abstracts/functions" as f;
+@use "./../abstracts/mixins" as m;
+
+.money {
+  padding-block-start: f.rem(32);
+  padding-inline: f.rem(28);
+  background-color: var(--c-white);
+  border-radius: f.rem(8);
+
+  @media (width >= 48em) {
+    padding-inline: f.rem(68);
+    display: grid;
+    gap: f.rem(30);
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  @media (width >= 75em) {
+    padding-inline: f.rem(98);
+  }
+
+  &__title {
+    font-size: var(--fs-lg);
+  }
+
+  &__body {
+    margin-block-start: f.rem(16);
+    margin-block-end: f.rem(20);
+    font-size: var(--fs-body);
+    color: var(--c-redish-light);
+    max-width: f.rem(425);
+
+    @media (width >= 75em) {
+      margin-block-start: f.rem(24);
+      margin-block-end: f.rem(28);
+      max-width: initial;
+    }
+  }
+
+  &__button {
+    @include m.button-red-transparent;
+  }
+
+  &__phone-mockup {
+    width: 100%;
+    height: f.rem(376);
+    background-image: url("./../../assets/phone-mockup-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (width >= 33.75em) {
+      background-image: url("./../../assets/phone-mockup-tablet.png");
+    }
+
+    @media (width >= 48em) {
+      background-image: url("./../../assets/phone-mockup-mobile.png");
+    }
+
+    @media (width >= 75em) {
+      background-image: url("./../../assets/phone-mockup-desktop.png");
+      background-position: 90%;
+    }
+  }
+}

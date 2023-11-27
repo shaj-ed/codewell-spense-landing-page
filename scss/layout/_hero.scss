@@ -1,0 +1,131 @@
+@use "./../abstracts/functions" as f;
+@use "./../abstracts/mixins" as m;
+
+.hero {
+  background-color: var(--c-white);
+  padding-block-end: f.rem(50);
+
+  @media (width >= 75em) {
+    padding-block-end: f.rem(70);
+  }
+
+  &__inner {
+    display: grid;
+    gap: f.rem(30);
+
+    @media (width >= 75em) {
+      gap: f.rem(140);
+      grid-template-columns: 1fr f.rem(420);
+      align-items: center;
+    }
+  }
+
+  &__background-image {
+    width: 100%;
+    height: f.rem(350);
+    background-image: url("./../../assets/hero-image-mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: f.rem(6);
+    overflow: hidden;
+
+    @media (width >= 48em) {
+      height: f.rem(400);
+      background-image: url("./../../assets/hero-image-tablet.png");
+    }
+
+    @media (width >= 75em) {
+      height: f.rem(520);
+      align-self: end;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      background-image: url("./../../assets/hero-image-desktop.png");
+    }
+  }
+
+  &__content {
+    @media (width >= 75em) {
+      grid-column: 1/2;
+    }
+  }
+
+  &__title {
+    font-size: var(--fs-xl);
+    color: var(--c-dark);
+  }
+
+  &__body {
+    max-width: f.rem(500);
+    font-size: var(--fs-body);
+    margin-block-start: f.rem(10);
+    margin-block-end: f.rem(12);
+    color: var(--c-redish-light);
+
+    @media (width >= 75em) {
+      max-width: initial;
+    }
+  }
+
+  &__check {
+    @include m.common-flex;
+    gap: f.rem(18);
+    margin-block-end: f.rem(6);
+
+    span {
+      font-size: var(--fs-sm);
+      font-weight: 500;
+      color: var(--c-redish);
+    }
+  }
+
+  &__form {
+    margin-block-start: f.rem(20);
+    display: flex;
+    gap: f.rem(15);
+    position: relative;
+
+    @media (width >= 75em) {
+      margin-block-start: f.rem(30);
+    }
+
+    .message {
+      font-size: f.rem(16);
+      font-weight: 600;
+      text-transform: capitalize;
+      position: absolute;
+      bottom: f.rem(-30);
+      display: none;
+
+      &--error {
+        color: var(--c-redish);
+      }
+
+      &--success {
+        color: var(--c-dark);
+      }
+    }
+
+    .show {
+      display: block;
+    }
+  }
+
+  &__input {
+    font-size: f.rem(16);
+    font-weight: 600;
+    padding-block: f.rem(12);
+    padding-inline: f.rem(14);
+    border: f.rem(1) solid var(--c-light);
+    border-radius: f.rem(6);
+
+    &::placeholder {
+      font-weight: 400;
+      opacity: 0.7;
+    }
+  }
+
+  &__button {
+    @include m.button-dark;
+  }
+}

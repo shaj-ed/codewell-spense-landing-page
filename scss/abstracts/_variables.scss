@@ -1,0 +1,45 @@
+@use "./functions" as f;
+
+:root {
+  --font-stack: "Cabin", sans-serif;
+
+  --c-black: #000000;
+  --c-white: #f0eeeb;
+  --c-dark: #292929;
+  --c-light: #9e9e9e;
+  --c-redish: #5a5444;
+  --c-redish-light: #6c6758;
+
+  --fs-xl: #{clamp(
+      f.rem(36),
+      1.897887323943662rem + 1.5023474178403755vw,
+      f.rem(52)
+    )};
+  --fs-lg: #{clamp(
+      f.rem(32),
+      1.7359154929577465rem + 1.1267605633802815vw,
+      f.rem(44)
+    )};
+  --fs-md: #{clamp(
+      f.rem(20),
+      1.1619718309859155rem + 0.3755868544600939vw,
+      f.rem(24)
+    )};
+  --fs-sm: #{clamp(
+      f.rem(18),
+      1.0809859154929577rem + 0.18779342723004694vw,
+      f.rem(20)
+    )};
+  --fs-body: #{clamp(
+      f.rem(16),
+      0.9559859154929577rem + 0.18779342723004694vw,
+      f.rem(18)
+    )};
+  --fs-link: #{clamp(
+      f.rem(18),
+      1.0809859154929577rem + 0.18779342723004694vw,
+      f.rem(20)
+    )};
+
+  --transition: all 0.2s ease-in-out;
+}

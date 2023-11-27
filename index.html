@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Spense Landing Page</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Page Top -->
+    <div class="top">
+      <p class="top__body">
+        To celebrate Spense's launch, we will be waiving all fees for the entire
+        month of April.
+        <span class="top__underline">
+          You will be recieving 100% of the earnings.
+        </span>
+      </p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header__inner wrapper">
+        <a href="index.html" class="header__logo"> spense. </a>
+
+        <button type="button" class="header__hamburger">
+          <svg
+            width="24"
+            height="20"
+            viewBox="0 0 24 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+
+        <nav class="nav header__nav">
+          <ul class="nav__list" role="list">
+            <li class="nav__item">
+              <a href="#" class="nav__link"> buisness </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"> pricing </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"> features </a>
+            </li>
+          </ul>
+
+          <div class="nav__ctas">
+            <button type="button" class="nav__cta nav__cta--light">
+              login
+            </button>
+            <button type="button" class="nav__cta nav__cta--dark">
+              Get Started
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero__inner wrapper">
+          <div class="hero__background-image"></div>
+          <div class="hero__content">
+            <h2 class="hero__title">
+              Share you unfiltered <br />
+              thoughts. Get paid.
+            </h2>
+            <p class="hero__body">
+              Spense is an open platform for individuals to share their
+              unfiltered thoughts. Discuss the topics you love, and get paid for
+              doing just that.
+            </p>
+            <div class="hero__check">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z"
+                  fill="black"
+                />
+              </svg>
+              <span>Receive 99% off earnings.</span>
+            </div>
+            <div class="hero__check">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z"
+                  fill="black"
+                />
+              </svg>
+              <span>Get paid via Debit Card, ACH or Paypal.</span>
+            </div>
+            <div class="hero__check">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z"
+                  fill="black"
+                />
+              </svg>
+              <span>Withdraw your earnings anytime.</span>
+            </div>
+
+            <form class="hero__form" id="form">
+              <input
+                class="hero__input"
+                type="email"
+                id="input-email"
+                placeholder="john@example.com"
+                required
+              />
+              <button type="submit" class="hero__button">get started</button>
+              <span class="message message--error"
+                >sorry, probably entered wrong address.</span
+              >
+              <span class="message message--success">will get in touch.</span>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Logo Section -->
+      <section class="logo wrapper">
+        <div class="logo__facebook">
+          <img src="./assets/facebook-logo.png" />
+        </div>
+        <div class="logo__dribble">
+          <img src="./assets/dribble-logo.png" />
+        </div>
+        <div class="logo__youtube">
+          <img src="./assets/youtube-logo.png" />
+        </div>
+        <div class="logo__pinterest">
+          <img src="./assets/pinterest-logo.png" />
+        </div>
+        <div class="logo__twitter">
+          <img src="./assets/twitter-logo.png" />
+        </div>
+        <div class="logo__reddit">
+          <img src="./assets/reddit-logo.png" />
+        </div>
+        <div class="logo__google">
+          <img src="./assets/google-logo.png" />
+        </div>
+        <div class="logo__slack">
+          <img src="./assets/slack-logo.png" />
+        </div>
+      </section>
+
+      <!-- Money Section -->
+      <section class="money wrapper">
+        <div class="money__content">
+          <h2 class="money__title">
+            Secure your money <br />
+            with Escrow.
+          </h2>
+          <p class="money__body">
+            Spense uses Escrow to secure all payments. We believe Escrow offers
+            the highest level of security for your payments, so you never need
+            to worry about scams.
+          </p>
+          <button type="button" class="money__button">
+            <span> Learn more about Escrow</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="money__phone-mockup"></div>
+      </section>
+
+      <!-- Text Editor -->
+      <section class="editor wrapper">
+        <div class="editor__content">
+          <h2 class="editor__title">A text editor like no other</h2>
+          <p class="editor__body">
+            Our text editor pulls you into focus mode with it’s simplistic
+            design and usability so you can put out your best writings.
+          </p>
+          <button class="editor__button" type="button">
+            <span>Text Editor Live Demo</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="editor__image">
+          <img src="./assets/text-editor.png" alt="Text editor video" />
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__inner wrapper">
+        <div class="footer__top">
+          <a href="index.html" class="footer__logo"> spense. </a>
+          <p class="footer__body">
+            Spense is an open platform for individuals to share their unfiltered
+            thoughts. Discuss the topics you love, and get paid for doing just
+            that.
+          </p>
+        </div>
+        <div class="footer__company">
+          <h3 class="footer__list-title">company</h3>
+
+          <ul role="list" class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">about</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">customers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__sitemap">
+          <h3 class="footer__list-title">sitemap</h3>
+
+          <ul role="list" class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">homepage</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__resources">
+          <h3 class="footer__list-title">resources</h3>
+
+          <ul role="list" class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">support</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">contact</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__opportunities">
+          <h3 class="footer__list-title">opportunities</h3>
+
+          <ul role="list" class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">jobs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

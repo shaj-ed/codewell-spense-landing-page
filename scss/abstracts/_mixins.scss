@@ -1,0 +1,57 @@
+@use "./../abstracts/functions" as f;
+
+@mixin button-dark {
+  font-size: f.rem(16);
+  font-weight: 500;
+  padding-block: f.rem(15);
+  padding-inline: f.rem(18);
+  background-color: var(--c-black);
+  color: var(--c-white);
+  border-radius: f.rem(6);
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover {
+    opacity: 0.95;
+  }
+
+  @media (width >= 48em) {
+    font-size: f.rem(18);
+  }
+}
+
+@mixin common-flex {
+  display: flex;
+  gap: f.rem(28);
+  align-items: center;
+}
+
+@mixin button-red-transparent {
+  @include common-flex;
+  gap: f.rem(8);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--c-redish);
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: f.rem(2);
+    background-color: var(--c-redish);
+    bottom: f.rem(4);
+  }
+
+  svg {
+    fill: var(--c-redish);
+  }
+}

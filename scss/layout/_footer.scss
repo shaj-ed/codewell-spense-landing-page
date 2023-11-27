@@ -1,0 +1,80 @@
+@use "./../abstracts/functions" as f;
+@use "./../abstracts/mixins" as m;
+
+.footer {
+  background-color: var(--c-black);
+  padding-block: f.rem(48);
+  color: var(--c-white);
+
+  @media (width >= 78em) {
+    &__sitemap,
+    &__company,
+    &__resources {
+      justify-self: center;
+    }
+
+    &__opportunities {
+      justify-self: end;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    gap: f.rem(30);
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (width >= 48em) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (width >= 75em) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  &__top {
+    grid-column: span 2;
+  }
+
+  &__logo {
+    display: block;
+    font-size: clamp(
+      1.25rem,
+      1.1619718309859155rem + 0.3755868544600939vw,
+      1.5rem
+    );
+    font-weight: 700;
+    color: var(--c-white);
+    margin-block-end: f.rem(15);
+  }
+
+  &__body {
+    font-size: var(--fs-body);
+    color: var(--c-light);
+    max-width: f.rem(345);
+
+    @media (width >= 78em) {
+      max-width: initial;
+    }
+  }
+
+  &__list-title {
+    font-size: var(--fs-md);
+    text-transform: capitalize;
+    margin-block-end: f.rem(15);
+  }
+
+  &__link {
+    display: block;
+    font-size: var(--fs-link);
+    text-transform: capitalize;
+    color: var(--c-light);
+    cursor: pointer;
+    margin-block-end: f.rem(15);
+    transition: var(--transition);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
